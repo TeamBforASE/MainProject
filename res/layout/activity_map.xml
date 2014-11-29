@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.feedback.Map" >
+
+<!--     <com.google.android.maps.MapView -->
+<!--         android:id="@+id/mapView" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         style="@style/mapViewStyle" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:apiKey="AIzaSyBf67XmWFLP9g-sUuW1MqkYb6t5zyoXnLk" -->
+<!--         android:clickable="true" -->
+<!--         android:enabled="true" -->
+<!--         android:minHeight="240dp" /> -->
+ <com.google.android.maps.MapView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/map_view"
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent"
+  android:clickable="true" 
+  android:enabled="true" 
+  android:apiKey="AIzaSyAFkXWHMCuxq3EyafRiT8gPi07pkrOF0LA" 
+android:minHeight="240dp" />
+
+<TextView
+    android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/str_tv_location"
+        android:textStyle="bold" />
+ 
+    <TextView
+        android:id="@+id/tv_longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_location"
+        android:layout_centerHorizontal="true" />
+ 
+    <TextView
+        android:id="@+id/tv_latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_longitude"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/button222"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/zoomControls1"
+                android:layout_alignEnd="@+id/zoomControls1"
+        
+        android:layout_marginBottom="51dp"
+        android:text="@string/findme" />
+
+    <ZoomControls
+        android:id="@+id/zoomControls1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button111"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp" />
+
+    <Button
+        android:id="@+id/button111"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button222"
+        android:layout_alignBottom="@+id/button222"
+        android:layout_alignLeft="@+id/zoomControls1"
+        android:layout_alignStart="@+id/zoomControls1"
+        android:text="@string/BContinue" />
+
+</RelativeLayout>
